@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/89bc03ab95.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        main {
+            position:relative;
+        }
+        footer {
+            position: absolute;
+            bottom:0;
+            width: 100%;
+            border-top: 1px solid lightgrey;
+        }
+
+        footer a svg {
+            width:40px;
+            height:40px;
+        }
+
+        footer a svg:hover {
+            transform:scale(1.1)
+        }
+       
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <nav class="menu">
+            <a href="home.html" class="menu-item"> 
+              <i class="fa-solid fa-house mr-1"></i>
+              <span>Home</span>
+            </a>
+            <a href="fluxos.html" class="menu-item">
+              <i class="fa-solid fa-angles-right mr-1"></i>
+              <span>Fluxos</span>
+            </a>
+            <a href="sobre.html" class="menu-item  is-active">
+              <i class="fa-solid fa-align-left mr-1"></i>
+              <span>Sobre</span>
+            </a>
+          </nav>
+    </aside>
+    <!-- Hamb Menu -->
+    <div class="top-div">
+        <div class="menu-toggle">
+          <div class="hamb">
+            <span></span>
+          </div>
+        </div>
+    </div>
+    <main class="bg-white">
+          <section>
+              <div class="main-header d-flex align-items-center justify-content-center my-2 text-primary">
+                  <h3 class="h3 fs-15">Sobre</h3>
+              </div>
+              <div class="main-body d-flex align-items-center justify-content-center px-2 text-justify">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In necessitatibus perspiciatis adipisci nulla! Ipsa libero doloribus aliquam sapiente repellat ab dolorum non laboriosam sequi, molestias dignissimos! Rem architecto quaerat beatae.</p>
+              </div>
+          </section>
+          <footer class="py-2">
+              <div class="content-container d-flex align-items-center justify-content-center ">
+                  <a href="#"> <i data-feather="github" class="text-primary"></i> </a>
+              </div>
+          </footer>
+    </main>
+
+    <script>
+        feather.replace()
+    </script>
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle") 
+        const sidebar = document.querySelector(".sidebar") 
+        menuToggle.addEventListener("click", () => {
+          menuToggle.classList.toggle("is-active")
+          sidebar.classList.toggle("is-active")
+        })
+      
+    </script>
+</body>
+</html>

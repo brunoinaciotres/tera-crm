@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/89bc03ab95.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <nav class="menu">
+      <a href="home.html" class="menu-item is-active"> 
+        <i class="fa-solid fa-house mr-1"></i>
+        <span>Home</span>
+      </a>
+      <a href="fluxos.html" class="menu-item">
+        <i class="fa-solid fa-angles-right mr-1"></i>
+        <span>Fluxos</span>
+      </a>
+      <a href="sobre.html" class="menu-item">
+        <i class="fa-solid fa-align-left mr-1"></i>
+        <span>Sobre</span>
+      </a>
+    </nav>
+  </aside>   
+  <!-- Hamb Menu -->
+  <div class="top-div">
+    <div class="menu-toggle">
+      <div class="hamb">
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <main class="bg-white">
+    <div class="main-header d-flex align-items-center p-1 mb-1">
+      <div class="profile-img mr-1">
+          <img src="img/cartoon.png" alt="Profile Picture">
+      </div>
+      <h2 class="h3 fw-500"> Olá John!</h2>
+    </div>
+    <div class="main-body p-1">
+      <h3 class="fw-500 fs-15 text-dark">Seus Fluxos</h3>
+      <div class="fluxos-container d-flex py-1 text-white">
+          
+        <div class="fluxo-card mr-1 col-2 bg-blue p-1 box-shadow-subtle pointer">
+            <div class="box-top">
+                <div class="square -white"></div>
+            </div>
+            <div class="card-title">
+                <h3 class="h3 fw-500">Fluxo 1</h3>
+            </div>
+        </div>
+  
+      </div>
+    </div>
+      
+  </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+          crossorigin="anonymous">
+  </script>
+  <script src="app/home.js"></script>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle") 
+    const sidebar = document.querySelector(".sidebar") 
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("is-active")
+      sidebar.classList.toggle("is-active")
+    })
+  
+  </script>
+</body>
+</html>

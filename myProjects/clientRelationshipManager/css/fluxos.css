@@ -1,0 +1,170 @@
+section {
+    height: 100vh;
+}
+
+.tools {
+    height: 90px;
+    background: #fff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tools-div button {
+    margin-left: 1rem;
+}
+
+fieldset {
+    border: 0;
+}
+
+select#flow {
+    padding: 5px 10px;
+    border: 0;
+    width: 150px;
+    border-radius: 5px;
+}
+
+
+.kanban-column {
+    min-width: 200px;
+}
+
+.kanban-flow {
+    overflow-x: auto;
+}
+
+
+.kanban-column .title {
+    height: 35px;
+    /* border: 1px solid #aaa; */
+}
+
+.deal {
+    min-height: 100px;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+.deal:hover {
+    background: rgb(225, 225, 225);
+}
+
+.modal {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+
+}
+
+.modal-bg {
+    background: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+}
+
+.modal-content {
+    height: 400px;
+    position: relative;
+}
+
+.modal-header {
+    border-bottom: 1px solid #aaa;
+    height: 10%;
+}
+
+.modal-body {
+    height: 80%;
+}
+
+
+.label-div {
+    width: 150px;
+    display: inline-block
+}
+
+.modal-input {
+    width: 250px;
+    padding: 5px 15px;
+
+}
+
+.select-div {
+    display: inline-block;
+}
+
+.modal-button {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.no-columns-warn {
+    width: 80%;
+    border: 1px solid #08569b;
+    height: 100px;
+    color: #08569b;
+    margin: 0 auto;
+    border-radius: 15px;
+    cursor: default;
+}
+
+@media screen and (max-width: 545px) {
+    .tools {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 6rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .tools-div {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .tools-div button {
+        margin-left: 0;
+    }
+
+    select#flow {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-body form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .modal-body form fieldset {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .label-div {
+        width: auto;
+    }
+
+    
+}
+
+@media screen and (max-width: 320px) {
+    .tools {
+        height: 13rem;
+    }
+
+    .tools-div button {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .tools-div:nth-child(2) {
+        flex-direction: column;
+    }
+}

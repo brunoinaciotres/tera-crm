@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fluxos</title>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/89bc03ab95.js" crossorigin="anonymous"></script>
+  <!-- ---- -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fluxos.css">
+</head>
+
+<body>
+
+  <!-- Menu -->
+
+  <aside class="sidebar">
+    <nav class="menu">
+      <a href="home.html" class="menu-item">
+        <i class="fa-solid fa-house mr-1"></i>
+        <span>Home</span>
+      </a>
+      <a href="fluxos.html" class="menu-item is-active">
+        <i class="fa-solid fa-angles-right mr-1"></i>
+        <span>Fluxos</span>
+      </a>
+      <a href="sobre.html" class="menu-item">
+        <i class="fa-solid fa-align-left mr-1"></i>
+        <span>Sobre</span>
+      </a>
+    </nav>
+  </aside>
+  <!-- Hamb menu -->
+  <div class="top-div">
+    <div class="menu-toggle">
+      <div class="hamb">
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <main class="bg-white col-12">
+    <section>
+      <!-- Tools  -->
+      <div class="tools col-12 bg-light-grey d-flex align-items-center justify-content-end px-2 mb-1">
+        <div class="tools-div d-flex align-items-center">
+          <select name="flow" id="flow" class="focus-blue">
+            <option value="emptyKanban">Crie um Fluxo</option>
+          </select>
+        </div>
+        <div class="tools-div d-flex align-items-center">
+          <button type="button" id="open-flow-modal" class="open-close-flow btn-blue btn text-white focus-blue">
+            Criar Fluxo
+          </button>
+          <button type="button" id="open-column-modal"
+            class="open-close-column  btn-blue btn text-white focus-blue">
+            Criar Coluna
+          </button>
+          <button type="button" id="open-deal-modal" class="open-close-deal btn-blue btn text-white focus-blue">
+            Criar Deal
+          </button>
+        </div>
+      </div>
+
+      <!-- Kanban Flow -->
+      <div class="kanban-flow d-flex">
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal modal-create-deal col-12 d-none">
+    <div class="modal-bg col-12 d-flex align-items-center justify-content-center">
+      <div class="modal-content bg-white-2  ">
+        <div class="modal-header d-flex justify-content-between p-1 align-items-center">
+          <h3>Criar Deal</h3>
+          <i class="fa-solid fa-xmark pointer close-icon-deal open-close-deal"></i>
+        </div>
+        <div class="modal-body p-1">
+          <form action="#" id="create-deal-form">
+            <fieldset>
+              <div class="label-div">
+                <label for="name" class="modal-label">Nome:</label>
+              </div>
+              <input type="text" autocomplete="off" id="name" class="modal-input mb-1">
+            </fieldset>
+            <br>
+            <fieldset>
+              <div class="label-div">
+                <label for="desc" class="modal-label">Descrição:</label>
+              </div>
+              <input type="text" autocomplete="off" id="desc" class="modal-input mb-1">
+            </fieldset>
+            <br>
+            <fieldset>
+              <div class="label-div">
+                <label for="column">Selecione a Coluna:</label>
+              </div>
+              <div class="select-div"></div>
+            </fieldset>
+            <button class="btn btn-lg btn-blue text-white modal-button" id="create-deal">Criar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-create-column col-12 d-none">
+    <div class="modal-bg col-12 d-flex align-items-center justify-content-center">
+      <div class="modal-content bg-white-2">
+        <div class="modal-header d-flex justify-content-between p-1 align-items-center">
+          <h3>Criar Coluna</h3>
+          <i class="open-close-column fa-solid fa-xmark pointer close-icon-column"></i>
+        </div>
+        <div class="modal-body p-1">
+          <form action="#" id="create-column-form">
+            <fieldset>
+              <div class="label-div">
+                <label for="name-column" class="modal-label">Nome:</label>
+              </div>
+              <input type="text" autocomplete="off" id="name-column" class="modal-input mb-1">
+            </fieldset>
+            <br>
+            <button class="btn btn-lg btn-blue text-white modal-button" id="create-column">Criar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-create-flow col-12 d-none">
+    <div class="modal-bg col-12 d-flex align-items-center justify-content-center">
+      <div class="modal-content bg-white-2">
+        <div class="modal-header d-flex justify-content-between p-1 align-items-center">
+          <h3>Criar Fluxo</h3>
+          <i class="fa-solid fa-xmark pointer close-icon-flow open-close-flow"></i>
+        </div>
+        <div class="modal-body p-1">
+          <form action="#" id="create-flow-form">
+            <fieldset>
+              <div class="label-div">
+                <label for="name-column" class="modal-label">Nome:</label>
+              </div>
+              <input type="text" autocomplete="off" id="name-flow" class="modal-input mb-1">
+            </fieldset>
+            <br>
+            <button class="btn btn-lg btn-blue text-white modal-button" id="create-flow">Criar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="module" src="app/flow.js"></script>
+
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle")
+    const sidebar = document.querySelector(".sidebar")
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("is-active")
+      sidebar.classList.toggle("is-active")
+    })
+
+  </script>
+</body>
+
+</html>
